@@ -1,0 +1,15 @@
+{
+  "name": "sassy-helpers",
+  "version": "1.0.0",
+  "description": "Useful sass mixins",
+  "keywords": [
+    "sass",
+    "scss",
+    "mixins",
+    "bootstrap",
+    "foundation"
+  ],
+  "main": "index.js",
+  "author": "Marvin Hagemeister <marvin@marvinhagemeister.de>",
+  "license": "MIT"
+}
