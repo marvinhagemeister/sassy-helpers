@@ -9,6 +9,10 @@
     "bootstrap",
     "foundation"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:marvinhagemeister/sassy-helpers.git"
+  },
   "main": "index.js",
   "author": "Marvin Hagemeister <marvin@marvinhagemeister.de>",
   "license": "MIT"
