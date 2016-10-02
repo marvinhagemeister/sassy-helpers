@@ -9,16 +9,21 @@
 
 // Lock aspect ratio
 @mixin ratio($width: 1, $height: 1) {
+  overflow: hidden;
   position: relative;
   padding-bottom: percentage($height/$width);
   height: 0;
 }
 
-@mixin ratio-inner() {
+@mixin ratio-inner {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   margin: auto;
+}
+
+@mixin center-translate {
+  transform: translate3d(-50%, -50%, 0);
 }
