@@ -28,16 +28,26 @@
   transform: translate3d(-50%, -50%, 0);
 }
 
-// Better text underlines
-@mixin smart-underline($color: red, $stroke: white, $width: 20px, $selection: #b5d6fa) {
+@mixin text-stroke($offset, $color) {
   text-shadow:
-    $width 0 0 $stroke,
-    -#{$width} 0 0 $stroke;
+    $offset 0 $color,
+    0 ($offset / 1.5) $color,
+    ($offset / 2) 0 $color,
+    ($offset / 2) ($offset / 2) $color,
+    -#{$offset / 2} 0 $color,
+    0 -#{$offset / 1.5} $color,
+    -#{$offset / 1} -#{$offset / 2} $color,
+    -#{$offset} 0 $color;
+}
+
+// Better text underlines
+@mixin smart-underline($color: red, $stroke: white, $stroke-width: .1em, $offset: .1em, $selection: #b5d6fa) {
+  @include text-stroke($offset, $stroke);
   background-image: linear-gradient(to right, $color 0%, $color 100%);
   background-repeat: repeat-x;
   background-position: 0 96%;
-  background-size: 100% 5px;
-  
+  background-size: 100% $stroke-width;
+
   &::selection {
     text-shadow: none;
     background: $selection;
