@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.0
+
+- Add smart underline mixin
+
 ## 1.0.1
 
 - Enhance ratio mixin to center image vertically
