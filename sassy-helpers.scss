@@ -27,3 +27,24 @@
 @mixin center-translate {
   transform: translate3d(-50%, -50%, 0);
 }
+
+// Better text underlines
+@mixin smart-underline($color: red, $stroke: white, $width: 20px, $selection: #b5d6fa) {
+  text-shadow:
+    $width 0 0 $stroke,
+    -#{$width} 0 0 $stroke;
+  background-image: linear-gradient(to right, $color 0%, $color 100%);
+  background-repeat: repeat-x;
+  background-position: 0 96%;
+  background-size: 100% 5px;
+  
+  &::selection {
+    text-shadow: none;
+    background: $selection;
+  }
+
+  &::-moz-selection {
+    text-shadow: none;
+    background: $selection;
+  }
+}
