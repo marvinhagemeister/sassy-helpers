@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.1
+
+- Minor enhancements to smart underline mixin
+
 ## 1.1.0
 
 - Add smart underline mixin
