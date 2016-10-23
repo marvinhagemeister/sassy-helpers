@@ -47,6 +47,7 @@
   background-repeat: repeat-x;
   background-position: 0 96%;
   background-size: 100% $stroke-width;
+  text-decoration: none;
 
   &::selection {
     text-shadow: none;
