@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.2.0
+
+- Add `reset-list` mixin
+- Remove `text-decoration` in `smart-underline` mixin
+
 ## 1.1.1
 
 - Minor enhancements to smart underline mixin
