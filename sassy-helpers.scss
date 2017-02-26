@@ -29,15 +29,7 @@
 }
 
 @mixin text-stroke($offset, $color) {
-  text-shadow:
-    $offset 0 $color,
-    0 ($offset / 1.5) $color,
-    ($offset / 2) 0 $color,
-    ($offset / 2) ($offset / 2) $color,
-    -#{$offset / 2} 0 $color,
-    0 -#{$offset / 1.5} $color,
-    -#{$offset / 1} -#{$offset / 2} $color,
-    -#{$offset} 0 $color;
+  text-shadow: $offset 0 $color, 0 ($offset / 1.5) $color, ($offset / 2) 0 $color, ($offset / 2) ($offset / 2) $color, -#{$offset / 2} 0 $color, 0 -#{$offset / 1.5} $color, -#{$offset / 1} -#{$offset / 2} $color, -#{$offset} 0 $color;
 }
 
 // Better text underlines
@@ -64,4 +56,10 @@
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+// Push-left grid inspired by neat 2.0
+@function grid-item($columns, $grid-columns, $gutter) {
+  @return calc(percentage($columns / $grid-columns) - $gutter + 
+  ($gutter * percentage($columns / $grid-columns)));
 }
