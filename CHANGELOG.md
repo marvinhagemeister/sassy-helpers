@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.0
+
+- Add Push-left grid function inspired by neat 2.0
+
 ## 1.2.0
 
 - Add `reset-list` mixin
